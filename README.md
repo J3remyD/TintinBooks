@@ -1,6 +1,6 @@
 # Tintin Books POC
 
-![Angular Logo][angular_logo]
+![Angular Logo](https://angularjs.org/img/AngularJS-large.png)
 
 ## Features
 
@@ -11,8 +11,8 @@
 
 ## Prerequisites
 
-Hopefully you've already installed [NodeJS][nodejs], [Gulp][gulp] and
-[Bower][bower] on your machine.
+Hopefully you've already installed [NodeJS](https://nodejs.org/) and
+[Bower](https://bower.io/#install-bower) on your machine.
 
 ## Installation
 
@@ -71,8 +71,4 @@ This will perform the following tasks:
 
 ## Being curious ?
 
-I'd really your feedbacks!
-
-1.  Fork it!
-2.  Create your feature branch and commit your changes
-3.  Create your pull request
+I'd really love your feedbacks so feel free to fork and PR !!
