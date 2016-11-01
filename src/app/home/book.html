@@ -1,0 +1,25 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="books" ng-controller="BookController">
+    <md-card md-theme="default" md-theme-watch="" class="_md md-default-theme book-card" ng-repeat="book in books">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{book.title}}</span>
+        <span class="md-subhead">{{book.year}}</span>
+      </md-card-title-text>
+    </md-card-title>
+  <md-card-content layout="row" layout-align="space-between" class="layout-align-space-between-stretch layout-row">
+    <div class="md-media-xl card-media">
+    <img class="bookImage" src="{{book.image}}"/></div>
+    <md-card-actions layout="column" class="layout-column">
+      <md-button class="md-icon-button" ng-click="booky.info()">
+        <i class="material-icons lightBlue500">info</i>
+      </md-button>
+      <md-button class="md-icon-button" ng-click="booky.favorite()">
+        <i class="material-icons lightBlue500">favorite</i>
+      </md-button>
+      <md-button class="md-icon-button" ng-click="booky.settings()">
+        <i class="material-icons lightBlue500">settings</i>
+      </md-button>
+    </md-card-actions>
+  </md-card>
+</div>

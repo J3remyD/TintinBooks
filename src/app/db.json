@@ -1,0 +1,12 @@
+{"books":[
+    {"title":"Tintin au Congo", "year":"1931", "image":"https://fr.tintin.com/images/tintin/albums/images/CP01.jpg"},
+    {"title":"Tintin en Amérique", "year":"1932", "image":"https://fr.tintin.com/images/tintin/albums/images/CP02.jpg"},
+    {"title":"Les Cigares du Pharaon", "year":"1934", "image":"https://fr.tintin.com/images/tintin/albums/images/CP03.jpg"},
+    {"title":"Le Lotus Bleu", "year":"1936", "image":"https://fr.tintin.com/images/tintin/albums/images/CP04.jpg"},
+    {"title":"L'Oreille Cassée", "year":"1937", "image":"https://fr.tintin.com/images/tintin/albums/images/CP05.jpg"},
+    {"title":"L'île Noire", "year":"1938", "image":"https://fr.tintin.com/images/tintin/albums/images/CP06.jpg"},
+    {"title":"Le Sceptre d'Ottokar", "year":"1939", "image":"https://fr.tintin.com/images/tintin/albums/images/CP07.jpg"},
+    {"title":"Le Crabe aux Pinces d'Or", "year":"1941", "image":"https://fr.tintin.com/images/tintin/albums/images/CP08.jpg"},
+    {"title":"L'étoile Mystérieuse", "year":"1942", "image":"https://fr.tintin.com/images/tintin/albums/images/CP09.jpg"},
+    {"title":"Le Secret de la Licorne", "year":"1944", "image":"https://fr.tintin.com/images/tintin/albums/images/CP10.jpg"}
+]}

@@ -1,0 +1,50 @@
+{
+  "name": "tintin-books",
+  "description": "Tintin Books",
+  "version": "1.0.0",
+  "author": "Jeremy Darchy",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "connect-history-api-fallback": "^1.2.0",
+    "del": "^2.2.1",
+    "eslint": "^3.0.1",
+    "eslint-config-google": "^0.6.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-html-replace": "^1.6.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-usemin": "^0.3.23",
+    "http-server": "^0.9.0",
+    "minimist": "^1.2.0",    
+    "run-sequence": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=0.12"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "gulp serve",
+    "build": "gulp build",
+    "serve:dist": "gulp serve:dist"
+  },
+  "eslintConfig": {
+    "extends": [
+      "google"
+    ],
+    "globals": {
+      "angular": true,
+      "inject": true
+    },
+    "env": {
+      "browser": true
+    }
+  }
+}

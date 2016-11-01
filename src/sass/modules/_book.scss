@@ -1,0 +1,26 @@
+md-card md-card-content {
+  align-self: center;
+  font-weight: bold;
+}
+
+md-card md-card-actions {
+  align-self: center;
+}
+
+.book-card {
+  max-width:300px;
+  max-height: 500px;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.material-icons.lightBlue500 {
+  color: #03A9F4;
+}
+
+.bookImage {
+  margin-left: 80px;
+}
