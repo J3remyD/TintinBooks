@@ -1,9 +1,9 @@
 (function() {
   'use strict';
 
-  angular.module('app').controller('HomeController', HomeController);
+  angular.module('app').controller('HomeController', HomeController).constant('_', window._);
 
-  function HomeController($mdToast) {
+  function HomeController($scope, $mdToast) {
     var vm = this;
     vm.toast = $mdToast;
 
@@ -12,6 +12,14 @@
         .textContent('Welcome to Tintin Library !'));
 
     this._init();
+
+    $scope.$on('favoriteUpdate', function(event, favs) {
+      let books = event.currentScope.books;
+      event.currentScope.books = _.filter(books, function(book) {
+        return favs.includes(book.id);
+      });
+  //    $scope.books =
+     });
   }
 
   HomeController.prototype._init = function() {
@@ -32,9 +40,8 @@
     HomeController.prototype.publish = function() {
       alert('test !!');
     }
-
     vm.selectedIndex += 1;
   };
 
-  HomeController.$inject = ['$mdToast'];
+  HomeController.$inject = ['$scope', '$mdToast'];
 })();

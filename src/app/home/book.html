@@ -11,13 +11,13 @@
     <div class="md-media-xl card-media">
     <img class="bookImage" src="{{book.image}}"/></div>
     <md-card-actions layout="column" class="layout-column">
-      <md-button class="md-icon-button" ng-click="booky.info()">
+      <md-button id="infoBtn" class="md-icon-button" ng-click="booky.info()">
         <i class="material-icons lightBlue500">info</i>
       </md-button>
-      <md-button class="md-icon-button" ng-click="booky.favorite()">
+      <md-button id="favBtn_{{book.id}}" class="md-icon-button favBtn" ng-click="booky.favorite(book.id);">
         <i class="material-icons lightBlue500">favorite</i>
       </md-button>
-      <md-button class="md-icon-button" ng-click="booky.settings()">
+      <md-button id="settingBtn" class="md-icon-button" ng-click="booky.settings()">
         <i class="material-icons lightBlue500">settings</i>
       </md-button>
     </md-card-actions>

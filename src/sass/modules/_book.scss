@@ -24,3 +24,14 @@ md-card md-card-actions {
 .bookImage {
   margin-left: 80px;
 }
+
+.favBtn {
+  -webkit-transition: transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform-origin: 50% 53%;
+}
+
+.favBtn.animated {  
+  -webkit-transform: rotateY(360deg) scale(2);
+   transform: rotateY(360deg) scale(2);
+}
