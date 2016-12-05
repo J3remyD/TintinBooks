@@ -7,6 +7,10 @@ md-card md-card-actions {
   align-self: center;
 }
 
+md-card:hover {
+  box-shadow: 0 5px 15px rgba(30,136,229,0.5);
+}
+
 .book-card {
   max-width:300px;
   max-height: 500px;
@@ -31,7 +35,7 @@ md-card md-card-actions {
   -webkit-transform-origin: 50% 53%;
 }
 
-.favBtn.animated {  
+.favBtn.animated {
   -webkit-transform: rotateY(360deg) scale(2);
    transform: rotateY(360deg) scale(2);
 }
