@@ -6,13 +6,11 @@
   let favs = [];
 
   function BookController($scope, $http) {
-    $http.get("http://localhost:3000/db")
-   .success(function(response) {
+   $http.get("http://localhost:3000/db").success(function(response) {
      $scope.books = response.books;
-   })
-   .error(function(data, status) {
+   }).error(function(data, status) {
   	  console.log(data);
-    });
+   });
   }
 
   BookController.prototype.info = function() {

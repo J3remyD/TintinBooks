@@ -1,6 +1,6 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="books" ng-controller="BookController">
-    <md-card md-theme="default" md-theme-watch="" class="_md md-default-theme book-card" ng-repeat="book in books">
+    <md-card md-theme="default" md-theme-watch="" class="_md md-default-theme book-card {{book.hover}}" ng-repeat="book in books">
     <md-card-title>
       <md-card-title-text>
         <span class="md-headline">{{book.title}}</span>
