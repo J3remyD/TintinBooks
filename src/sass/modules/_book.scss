@@ -2,13 +2,12 @@
 /*
  *  cards
  */
-md-card md-card-content {
-  align-self: center;
-  font-weight: bold;
-}
-
 md-card md-card-actions {
   align-self: center;
+}
+
+md-tooltip .md-content {
+    height: auto;
 }
 
 .book-card {

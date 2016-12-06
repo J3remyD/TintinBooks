@@ -17,8 +17,14 @@
       <md-button id="favBtn_{{book.id}}" class="md-icon-button favBtn" ng-click="booky.favorite(book.id);">
         <i class="material-icons lightBlue500">favorite</i>
       </md-button>
-      <md-button id="settingBtn" class="md-icon-button" ng-click="booky.settings()">
-        <i class="material-icons lightBlue500">settings</i>
+      <md-button id="settingBtn" class="md-icon-button">
+        <i class="material-icons lightBlue500">face</i>
+        <md-tooltip>
+          <div>
+            Personnages principaux <br>
+            {{book.tooltip}}
+          </div>
+        </md-tooltip>
       </md-button>
     </md-card-actions>
   </md-card>

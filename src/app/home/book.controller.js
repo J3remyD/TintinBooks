@@ -23,10 +23,6 @@
     handleFavs(favoriteBtn, id);
   };
 
-  BookController.prototype.settings = function() {
-    alert('settings');
-  };
-
   function removeScale(id) {
     setTimeout(() => {
       toggleFavoriteAnimation(id);
