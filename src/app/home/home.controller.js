@@ -37,8 +37,8 @@
       return;
     }
 
-    HomeController.prototype.publish = function() {
-      alert('test !!');
+    HomeController.prototype.checkResult = function() {
+      alert('checkQuizzResult !!');
     }
     vm.selectedIndex += 1;
   };
