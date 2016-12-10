@@ -2,19 +2,34 @@
   'use strict';
 
   angular.module('app').controller('BookController', BookController);
+  angular.module('app').controller('DialogController', DialogController);
 
   let favs = [];
+  let dialog;
 
-  function BookController($scope, $http) {
+  function BookController($scope, $http, $mdDialog) {
    $http.get("http://localhost:3000/db").success(function(response) {
      $scope.books = response.books;
    }).error(function(data, status) {
   	  console.log(data);
    });
+
+   $scope.status = '  ';
+   dialog = $mdDialog;
   }
 
-  BookController.prototype.info = function() {
-    alert('info');
+  BookController.prototype.info = function(id, ev) {
+    dialog.id = id;
+    dialog.show({
+      controller: DialogController,
+      templateUrl: 'popup.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: true
+    }).then(function(answer) {
+      console.log(answer);
+    });
   };
 
   BookController.prototype.favorite = function(id) {
@@ -47,5 +62,32 @@
 
     const scope = angular.element(favoriteBtn).scope();
     scope.$emit('favoriteUpdate', favs);
+  }
+
+  function DialogController($scope, $http, $mdDialog) {
+    const spawnId = $mdDialog.id;
+    $http.get("http://localhost:3000/popups/" + spawnId).success(function(response) {
+      $http.get("http://localhost:3000/books/" + spawnId).success(function(response) {
+        $scope.title = response.title;
+      }).error(function(data, status) {
+         console.log(data);
+      });
+      $scope.desc = response.desc;
+      $scope.subtitle = response.subtitle;
+      $scope.desc2 = response.desc2;
+    }).error(function(data, status) {
+       console.log(data);
+    });
+
+    $scope.hide = function() {
+     $mdDialog.hide();
+    };
+    $scope.cancel = function() {
+     $mdDialog.cancel();
+    };
+
+    $scope.close = function() {
+     $mdDialog.hide();
+    };
   }
 })();

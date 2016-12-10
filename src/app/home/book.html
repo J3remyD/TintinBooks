@@ -11,7 +11,7 @@
     <div class="md-media-xl card-media">
     <img class="bookImage" src="{{book.image}}"/></div>
     <md-card-actions layout="column" class="layout-column">
-      <md-button id="infoBtn" class="md-icon-button" ng-click="booky.info()">
+      <md-button id="infoBtn" class="md-icon-button" ng-click="booky.info(book.id, $event)">
         <i class="material-icons lightBlue500">info</i>
       </md-button>
       <md-button id="favBtn_{{book.id}}" class="md-icon-button favBtn" ng-click="booky.favorite(book.id);">
@@ -29,3 +29,41 @@
     </md-card-actions>
   </md-card>
 </div>
+<script type="text/ng-template" id="popup.html">
+ <md-dialog ng-controller="DialogController"  ng-model="dialog">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{title}} </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <img src="../../images/icon-128x128.png"/>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h2>{{subtitle}}</h2>
+        <p>
+          {{desc}}
+        </p>
+
+        <img style="margin: auto; max-width: 100%;" alt="Lush mango tree" src="img/mangues.jpg">
+
+        <p>
+          {{desc2}}
+        </p>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button href="// TODO: PUT THE LINK //" target="_blank" md-autofocus>
+        More on Wikipedia
+      </md-button>
+      <span flex></span>
+      <md-button ng-click="close()">Close</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
+</script>
