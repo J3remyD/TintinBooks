@@ -74,6 +74,7 @@
       });
       $scope.desc = response.desc;
       $scope.subtitle = response.subtitle;
+      $scope.link = response.link;
       $scope.desc2 = response.desc2;
     }).error(function(data, status) {
        console.log(data);
